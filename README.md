@@ -26,3 +26,16 @@ Este proyecto tiene como objetivo proporcionar una comprensión clara del funcio
 ## Estructura de los Datos
 
 - **AtributosJuego.txt**: Archivo con los nombres de los atributos separados por comas. Ejemplo:
+TiempoExterior,Temperatura,Humedad,Viento
+
+- **Juego.txt**: Archivo con los ejemplos de entrenamiento en formato CSV. La última columna es la clase objetivo (por ejemplo, "Jugar"). Ejemplo:
+
+## Ejecución
+
+1. Descarga el proyecto y coloca los archivos `id3_arbol.py`, `AtributosJuego.txt` y `Juego.txt` en la misma carpeta.
+2. Abre una terminal en esa carpeta.
+3. Ejecuta el siguiente comando:
+
+ ```bash
+ python id3_arbol.py
+
