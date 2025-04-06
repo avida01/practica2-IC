@@ -21,7 +21,7 @@ Este proyecto tiene como objetivo proporcionar una comprensión clara del funcio
 
 - **`AtributosJuego.txt`**: Contiene los nombres de los atributos en formato CSV.
 - **`Juego.txt`**: Contiene los ejemplos de entrenamiento, donde cada línea tiene los valores de los atributos seguidos por la clase objetivo.
-- **`id3_arbol.py`**: El archivo principal con la implementación del algoritmo ID3 y la visualización del árbol de decisión.
+- **`arbol.py`**: El archivo principal con la implementación del algoritmo ID3 y la visualización del árbol de decisión.
 
 ## Estructura de los Datos
 
@@ -29,10 +29,11 @@ Este proyecto tiene como objetivo proporcionar una comprensión clara del funcio
 TiempoExterior,Temperatura,Humedad,Viento
 
 - **Juego.txt**: Archivo con los ejemplos de entrenamiento en formato CSV. La última columna es la clase objetivo (por ejemplo, "Jugar"). Ejemplo:
+soleado,caluroso,alta,falso,no nublado,templado,normal,falso,si
 
 ## Ejecución
 
-1. Descarga el proyecto y coloca los archivos `id3_arbol.py`, `AtributosJuego.txt` y `Juego.txt` en la misma carpeta.
+1. Descarga el proyecto y coloca los archivos `arbol.py`, `AtributosJuego.txt` y `Juego.txt` en la misma carpeta.
 2. Abre una terminal en esa carpeta.
 3. Ejecuta el siguiente comando:
 
