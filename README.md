@@ -1,3 +1,8 @@
+Perfecto, aquí tienes el `README.md` actualizado con los comandos necesarios para instalar las dependencias usando `pip`. También corregí el nombre del archivo en el bloque de ejecución para que coincida con el ejemplo:
+
+---
+
+```markdown
 # Árbol de Decisión ID3
 
 Este proyecto implementa el algoritmo de clasificación ID3 para la construcción de árboles de decisión. Utiliza un conjunto de datos con atributos y ejemplos de entrenamiento para crear un árbol que predice la clase de nuevos ejemplos.
@@ -11,11 +16,19 @@ Este proyecto tiene como objetivo proporcionar una comprensión clara del funcio
 ## Requisitos
 
 - Python 3.x
-- Bibliotecas:
-  - `math`
-  - `collections`
+- Bibliotecas necesarias:
+  - `math` (incluida en la biblioteca estándar)
+  - `collections` (incluida en la biblioteca estándar)
   - `networkx`
   - `matplotlib`
+
+### Instalación de dependencias
+
+Puedes instalar las dependencias necesarias con el siguiente comando:
+
+```bash
+pip install networkx matplotlib
+```
 
 ## Archivos del Proyecto
 
@@ -26,17 +39,26 @@ Este proyecto tiene como objetivo proporcionar una comprensión clara del funcio
 ## Estructura de los Datos
 
 - **AtributosJuego.txt**: Archivo con los nombres de los atributos separados por comas. Ejemplo:
-TiempoExterior,Temperatura,Humedad,Viento
 
-- **Juego.txt**: Archivo con los ejemplos de entrenamiento en formato CSV. La última columna es la clase objetivo (por ejemplo, "Jugar"). Ejemplo:
-soleado,caluroso,alta,falso,no nublado,templado,normal,falso,si
+```
+TiempoExterior,Temperatura,Humedad,Viento
+```
+
+- **Juego.txt**: Archivo con los ejemplos de entrenamiento en formato CSV. La última columna es la clase objetivo. Ejemplo:
+
+```
+soleado,caluroso,alta,falso,no  
+nublado,templado,normal,falso,si
+```
 
 ## Ejecución
 
-1. Descarga el proyecto y coloca los archivos `arbol.py`, `AtributosJuego.txt` y `Juego.txt` en la misma carpeta.
+1. Descarga el proyecto y asegúrate de tener los archivos `arbol.py`, `AtributosJuego.txt` y `Juego.txt` en la misma carpeta.
 2. Abre una terminal en esa carpeta.
 3. Ejecuta el siguiente comando:
 
- ```bash
- python id3_arbol.py
+```bash
+python arbol.py
+```
 
+Esto imprimirá el árbol de decisión en consola y mostrará una visualización gráfica del mismo.
