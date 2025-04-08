@@ -117,13 +117,13 @@ class AlgoritmoID3:
             if subarbol:
                 hijo.agregar_hijo(subarbol)
             else:
-                hijo.tipo = tipo_comun  # Default class
+                hijo.tipo = tipo_comun  
             nodo.agregar_hijo(hijo)
 
         return nodo
 
 
-# Utilidades
+# Funciones de Utilidad
 
 def calcular_entropia(ejemplos):
     total = len(ejemplos)
@@ -140,16 +140,22 @@ def dibujar_arbol(arbol, G=None, parent=None, node_name="root", pos_x=0, pos_y=0
         G.add_edge(parent, node_name)
 
     if arbol.es_hoja():
-        G.nodes[node_name]["label"] = f"Clase: {arbol.tipo}"
+        G.nodes[node_name]["label"] = arbol.tipo
     else:
-        G.nodes[node_name]["label"] = f"{arbol.atributo.nombre} = {arbol.valor}"
+        if arbol.valor is not None:
+            label = f"{arbol.atributo.nombre} = {arbol.valor}"
+        else:
+            label = f"{arbol.atributo.nombre}"
+        G.nodes[node_name]["label"] = label
 
     # Recursivamente agregar hijos
     y_offset = 1.5
     for i, hijo in enumerate(arbol.hijos):
-        dibujar_arbol(hijo, G, node_name, node_name + f"_h{i}", pos_x + 1, pos_y - y_offset * (i + 1), layer + 1)
+        if hijo is not None: 
+            dibujar_arbol(hijo, G, node_name, node_name + f"_h{i}", pos_x + 1, pos_y - y_offset * (i + 1), layer + 1)
 
     return G
+
 
 
 def mostrar_arbol(G):
@@ -159,8 +165,8 @@ def mostrar_arbol(G):
     # Mejora del estilo de la visualización
     plt.figure(figsize=(12, 12))
     nx.draw(G, pos, with_labels=False, node_size=3000, node_color="lightblue", font_size=10, font_weight="bold", arrows=False)
-    nx.draw_networkx_labels(G, pos, labels=labels, font_size=8, font_weight="normal")  # Labels sin negrita
-    plt.axis('off')  # Desactivar los ejes
+    nx.draw_networkx_labels(G, pos, labels=labels, font_size=8, font_weight="normal")  
+    plt.axis('off')  
     plt.show()
 
 
