@@ -1,8 +1,3 @@
-Perfecto, aquí tienes el `README.md` actualizado con los comandos necesarios para instalar las dependencias usando `pip`. También corregí el nombre del archivo en el bloque de ejecución para que coincida con el ejemplo:
-
----
-
-```markdown
 # Árbol de Decisión ID3
 
 Este proyecto implementa el algoritmo de clasificación ID3 para la construcción de árboles de decisión. Utiliza un conjunto de datos con atributos y ejemplos de entrenamiento para crear un árbol que predice la clase de nuevos ejemplos.
@@ -22,43 +17,10 @@ Este proyecto tiene como objetivo proporcionar una comprensión clara del funcio
   - `networkx`
   - `matplotlib`
 
-### Instalación de dependencias
+## Instalación de dependencias y ejecución
 
-Puedes instalar las dependencias necesarias con el siguiente comando:
+Puedes instalar las dependencias necesarias y ejecutar el proyecto con los siguientes comandos:
 
 ```bash
 pip install networkx matplotlib
-```
-
-## Archivos del Proyecto
-
-- **`AtributosJuego.txt`**: Contiene los nombres de los atributos en formato CSV.
-- **`Juego.txt`**: Contiene los ejemplos de entrenamiento, donde cada línea tiene los valores de los atributos seguidos por la clase objetivo.
-- **`arbol.py`**: El archivo principal con la implementación del algoritmo ID3 y la visualización del árbol de decisión.
-
-## Estructura de los Datos
-
-- **AtributosJuego.txt**: Archivo con los nombres de los atributos separados por comas. Ejemplo:
-
-```
-TiempoExterior,Temperatura,Humedad,Viento
-```
-
-- **Juego.txt**: Archivo con los ejemplos de entrenamiento en formato CSV. La última columna es la clase objetivo. Ejemplo:
-
-```
-soleado,caluroso,alta,falso,no  
-nublado,templado,normal,falso,si
-```
-
-## Ejecución
-
-1. Descarga el proyecto y asegúrate de tener los archivos `arbol.py`, `AtributosJuego.txt` y `Juego.txt` en la misma carpeta.
-2. Abre una terminal en esa carpeta.
-3. Ejecuta el siguiente comando:
-
-```bash
 python arbol.py
-```
-
-Esto imprimirá el árbol de decisión en consola y mostrará una visualización gráfica del mismo.
